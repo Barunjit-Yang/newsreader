@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+:root{
+    --black-textcolor: #000000;
+    --white-textcolor: #ffffff;
+    --white-bgcolor: #fdfbf7;
+    --black-bgcolor: #111111;
+    --secondary-bgcolor: #131717;
+    --hover-color: #FF4500;   
+}
+.header{
+    border: 1px solid;
+    height: 140px;
+    width: 100%;
+    background-color: var(--black-bgcolor);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+}
+.headerSection{
+    z-index: 99999;
+    position: relative;
+}
+.earthGifLogo{
+    height: 80px;
+    width: 80px;
+}
+.firstNav{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.inputSearch{
+    width: 200px;
+    height: 35px;
+    padding-left: 20px;
+    padding-right: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    transition: 0.8s;
+    transition-duration: 1s;
+    background-color: var(--white-bgcolor);
+}
+.inputSearch:hover{
+    width: 500px;
+    cursor: var(--black-textcolor);
+}
+/* #searchButton{
+    padding: 6px;
+    border-radius: 8px;
+    border: 2px solid white;
+    outline: 0;
+    background-color: var(--white-bgcolor);
+    color: var(--black-textcolor);
+}
+#searchButton:hover{
+    color: var(--white-textcolor);
+    background-color: var(--black-bgcolor);
+} */
+.SignInButton{
+    height: 35px;
+    width: 80px;
+    font-weight: 300;
+    border-radius: 10px;
+    border: none;
+    text-transform: uppercase;
+    background-color: var(--white-bgcolor);
+    color: var(--black-textcolor);
+}
+.SignInButton:hover{
+    border: 2px solid;
+    color: var(--white-textcolor);
+    background-color: var(--black-bgcolor);
+}
+.secondNav{
+    height: 55px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 4px;
+    background-color: var(--secondary-bgcolor);
+}
+.secondNav li{
+    list-style: none;
+    color: var(--white-textcolor);
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+    position: relative;
+    cursor: pointer;
+}
+.secondNav li::after{
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 0;
+    background: var(--hover-color);
+    bottom: -3px;
+    left: 0;
+    transition: 0.6s;
+}
+.secondNav li:hover::after{
+    width: 100%;
+}
+.secondNavItems.active{
+    color: var(--hover-color);
+}
+.userDetails{
+    border-radius: 18px;
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    top: -40px;
+    left: 800px;
+    bottom: 20px;
+    position: fixed;
+    padding: 30px 50px;
+    background-color: rgba(0, 0, 0, 0.609);
+    color: var(--white-textcolor);
+    border: 1px solid white;
+    /* box-shadow: 0 0 4px black; */
+}
+.userDetailsLayout{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.215);
+    backdrop-filter: blur(4px);
+    display: none;
+}
+.userInput{
+    width: 300px;
+    font-size: 18px;
+    margin: 2px;
+    outline: none;
+}
+.userDetails input{
+    padding: 7px;
+    font-family: none;
+    font-size: 16px;
+}
+.userDetails label{
+    font-size: 18px;
+    padding-top: 10px;
+    font-family: none;
+}
+.LogInButton{
+    width: 80px;
+    padding: 10px;
+    border-radius: 10px;
+    align-self: center;
+    border: 0;
+    background-color: var(--white-bgcolor);
+    color: var(--black-textcolor);
+}
+.LogInButton:hover{
+    background-color: rgb(142, 229, 12);
+    color: var(--white-textcolor);
+}
+.closeButton{
+    background-color: var(--white-bgcolor);
+    color: black;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.closeButton:hover{
+    color: var(--white-textcolor);
+    background-color: orangered;
+}
+
+.main{
+    padding: 20px 50px;
+    background-color: var(--white-bgcolor);
+    position: relative;
+    top: 140px;
+}
+.cardsContainer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    align-items: start;
+}
+.card{
+    width: 350px;
+    min-height: 380px;
+    box-shadow: 0 0 4px rgb(43, 42, 42);
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+.card:hover{
+    box-shadow: 1px 1px 8px rgb(36, 35, 35);
+    transform: translateY(-2px);
+}
+.cardHeader img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.cardContent{
+    padding: 12px;
+    text-overflow: ellipsis;
+}
+.newsSource{
+    margin-top: 12px;
+}

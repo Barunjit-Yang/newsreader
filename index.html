@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On this world</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link rel="icon" href="Rotating_earth_animated_transparent.gif">
+</head>
+<body>
+    <section class="headerSection">
+        <div class="header">
+            <div class="firstNav">
+                <a href="#"><img onclick="reloadPage()" class="earthGifLogo" src="Rotating_earth_animated_transparent.gif" alt="logo"></a>
+                <div>
+                    <input id="inputSearch" class="inputSearch" type="text" placeholder="Search here">
+                    <!-- <button id="searchButton"><i class='bx bx-search'></i></button> -->
+                </div>
+                <button class="SignInButton">sign in</button>
+            </div>
+            
+            <div class="secondNav">
+                <li class="secondNavItems" id="news" onclick="onNavItemClick(`news`)">news</li>
+                <li class="secondNavItems" id="finance" onclick="onNavItemClick(`finance`)">finance</li>
+                <li class="secondNavItems" id="sports" onclick="onNavItemClick(`sports`)">sports</li>
+                <li class="secondNavItems" id="entertainment" onclick="onNavItemClick(`entertainment`)">entertainment</li>
+                <li class="secondNavItems" id="worklife" onclick="onNavItemClick(`worklife`)">worklife</li>
+                <li class="secondNavItems" id="travel" onclick="onNavItemClick(`travel`)">travel</li>
+                <li class="secondNavItems" id="culture" onclick="onNavItemClick(`culture`)">culture</li>
+            </div>
+        </div>
+
+        <div class="userDetailsLayout">
+            <div class="userDetails">
+                <h1>User Information</h1>
+                <label for="name">Name:</label>
+                <input class="userInput" type="text">
+
+                <label for="Mail">Email:</label>
+                <input class="userInput" type="email">
+
+                <label for="password">Password:</label>
+                <input class="userInput" type="password"><br>
+
+                <button class="LogInButton">Log In</button><br>
+                <hr><br>
+                <a href="" style="align-self: center; font-family: none; color: blue;">Forgot password ?</a>
+                <span class="closeButton">X</span>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="main">
+            <div class="cardsContainer container flex" id="cardsContainer">                
+            </div>
+        </div>
+
+        <template id="templateNewsCard">
+            <div class="card">
+                <div class="cardHeader">
+                    <img src="https://placehold.jp/400x200.png" alt="card image" id="newsImg">
+                </div>
+                <div class="cardContent">
+                    <h3 id="newsTitle">This is the title</h3>
+                    <h6 id="newsSource" class="newsSource">End Gadget 20/02/2024</h6>
+                    <p class="newsDesc" id="newsDesc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit mollitia temporibus eligendi alias odio! Quia eligendi ipsum similique blanditiis. Corporis?</p>
+                </div>
+            </div>
+        </template>
+    </section>
+</body>
+<script src="script.js"></script>
+</html>
